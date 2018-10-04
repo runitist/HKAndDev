@@ -24,4 +24,36 @@
         <item name="android:textAllCaps">false</item>
         <item name="android:onClick">mp3clk</item>
     </style>
+
+    <!--계산기의 스타일 설정-->
+    <style name="operand">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">25dp</item>
+    </style>
+    <style name="operator">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">25dp</item>
+    </style>
+    <style name="linearlayout">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+    <style name="numbtn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">30dp</item>
+    </style>
+    <style name="opbtn">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:textSize">30dp</item>
+    </style>
 </resources>

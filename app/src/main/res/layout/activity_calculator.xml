@@ -13,53 +13,155 @@
 
         <EditText
             android:id="@+id/operand1"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:textSize="25dp"
+            style="@style/operand"
             android:hint="값1" />
 
         <TextView
             android:id="@+id/operator"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:textSize="25dp"
+            style="@style/operator"
             android:hint="+" />
 
         <EditText
             android:id="@+id/operand2"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:textSize="25dp"
+            style="@style/operand"
             android:hint="값2" />
 
         <TextView
             android:id="@+id/equal"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:textSize="25dp"
+            style="@style/operator"
             android:hint="=" />
 
         <TextView
             android:id="@+id/answer"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:textSize="25dp"
+            style="@style/operand"
             android:hint="답" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        style="@style/linearlayout"
+        android:orientation="horizontal">
 
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/linearlayout"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/linearlayout"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/num1"
+                        style="@style/numbtn"
+                        android:text="1" />
+
+                    <Button
+                        android:id="@+id/num2"
+                        style="@style/numbtn"
+                        android:text="2" />
+
+                    <Button
+                        android:id="@+id/num3"
+                        style="@style/numbtn"
+                        android:text="3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/linearlayout"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/num4"
+                        style="@style/numbtn"
+                        android:text="4" />
+
+                    <Button
+                        android:id="@+id/num5"
+                        style="@style/numbtn"
+                        android:text="5" />
+
+                    <Button
+                        android:id="@+id/num6"
+                        style="@style/numbtn"
+                        android:text="6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/linearlayout"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/num7"
+                        style="@style/numbtn"
+                        android:text="7" />
+
+                    <Button
+                        android:id="@+id/num8"
+                        style="@style/numbtn"
+                        android:text="8" />
+
+                    <Button
+                        android:id="@+id/num9"
+                        style="@style/numbtn"
+                        android:text="9" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/linearlayout"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/num0"
+                        style="@style/numbtn"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/equalbtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="=" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <Button
+                style="@style/opbtn"
+                android:id="@+id/clear"
+                android:text="C"
+                />
+            <Button
+                style="@style/opbtn"
+                android:id="@+id/plus"
+                android:text="+"
+                />
+            <Button
+                style="@style/opbtn"
+                android:id="@+id/minus"
+                android:text="-"
+                />
+            <Button
+                style="@style/opbtn"
+                android:id="@+id/mult"
+                android:text="*"
+                />
+            <Button
+                style="@style/opbtn"
+                android:id="@+id/div"
+                android:text="/"
+                />
+        </LinearLayout>
 
     </LinearLayout>
 
