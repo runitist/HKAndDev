@@ -63,16 +63,42 @@ public class CalculatorActivity extends AppCompatActivity {
         //연산값 입력
         //연산자가 입력되지 않은땐 값1에, 연산자가 입력되면 값 2에 입력. 그리고 각 4자리씩만.
         btn = (Button) view;//온클릭으로 넘어온 값을 저장하는 객체를 생성
-        if(operator.equals("")&&operand1.length()<4){
-            operand1 +=btn.getText();
+        if (operator.equals("") && operand1.length() < 4) {
+            operand1 += btn.getText();
             operandEt1.setText(operand1);
-        }else if(!operator.equals("")&&operand2.length()<4){
-            operand2 +=btn.getText();
+        } else if (!operator.equals("") && operand2.length() < 4) {
+            operand2 += btn.getText();
             operandEt2.setText(operand2);
         }
     }
 
     public void calculating(View view) {
         //계산 실행(위의 멤버변수에 저장된 값으로 계산은 실행.)
+        btn = (Button) view;
+        if (operand1.equals("") || operand2.equals("") || operator.equals("")) {
+            //예외처리.
+            Toast.makeText(this, "값을 입력해 주세요.", Toast.LENGTH_SHORT).show();
+        } else {
+            if (operator.equals("+")) {
+                result = (Integer.parseInt(operand1) + Integer.parseInt(operand2)) + "";
+            } else if (operator.equals("-")) {
+                result = (Integer.parseInt(operand1) - Integer.parseInt(operand2)) + "";
+            } else if (operator.equals("*")) {
+                result = (Integer.parseInt(operand1) * Integer.parseInt(operand2)) + "";
+            } else if (operator.equals("/")) {
+                if (operand2.equals("0")) {
+                    Toast.makeText(this, "0으로 나눌수 없습니다.", Toast.LENGTH_SHORT).show();
+                    //0으로 나누면 에러가 남.
+                } else {
+                    result = Math.round((Double.parseDouble(operand1) / Double.parseDouble(operand2)) * 10000d) / 10000d + "";
+                    //소수점 자리를 반올림함.
+                }
+            }
+            if (!operator.equals("/") && result.length() > 4) {
+                //규격외 숫자의 지수화.
+                result = result.substring(0, 4) + "e" + (result.length() - 4);
+            }
+            answerTv.setText(result);
+        }
     }
 }
