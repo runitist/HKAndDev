@@ -1,9 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MP3Activity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#97b8ff"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/music1"
+            style="@style/mp3btn"
+            android:text="@string/music1" />
+
+        <Button
+            android:id="@+id/music2"
+            style="@style/mp3btn"
+            android:text="@string/music2" />
+
+        <Button
+            android:id="@+id/music3"
+            style="@style/mp3btn"
+            android:text="@string/music3" />
+
+        <Button
+            android:id="@+id/music4"
+            style="@style/mp3btn"
+            android:text="@string/music4" />
+
+        <Button
+            android:id="@+id/music5"
+            style="@style/mp3btn"
+            android:text="@string/music5" />
+
+        <Button
+            android:id="@+id/music6"
+            style="@style/mp3btn"
+            android:text="@string/music6" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/pause"
+        style="@style/mp3btn"
+        android:text="@string/mp3_button1_1" />
+
+    <Button
+        android:id="@+id/stop"
+        style="@style/mp3btn"
+        android:text="@string/mp3_button2" />
+
+</LinearLayout>

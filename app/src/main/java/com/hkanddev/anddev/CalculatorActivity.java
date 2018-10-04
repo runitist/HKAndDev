@@ -12,7 +12,8 @@ public class CalculatorActivity extends AppCompatActivity {
 
         _init();
     }
-    private void _init(){
+
+    private void _init() {
         setTitle(R.string.calc_title);
     }
 }

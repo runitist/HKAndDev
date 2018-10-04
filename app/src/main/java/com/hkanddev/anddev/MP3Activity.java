@@ -11,7 +11,8 @@ public class MP3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_mp3);
         _init();
     }
-    private void _init(){
+
+    private void _init() {
         setTitle(R.string.mp3_title);
     }
 }

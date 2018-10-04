@@ -5,4 +5,13 @@
     <string name="mp3_title">MP3 플레이어</string>
     <string name="main_button1">Calculator</string>
     <string name="main_button2">MP3 Player</string>
+    <string name="mp3_button1_1">재생</string>
+    <string name="mp3_button1_2">일시정지</string>
+    <string name="mp3_button2">정지</string>
+    <string name="music1">Believer</string>
+    <string name="music2">Dragon Blade</string>
+    <string name="music3">Galway Girl</string>
+    <string name="music4">Natural</string>
+    <string name="music5">7years</string>
+    <string name="music6">Shape of you</string>
 </resources>
