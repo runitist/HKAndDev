@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">anddev</string>
     <string name="main_title">메인 페이지</string>
+    <string name="calc_title">계산기</string>
+    <string name="mp3_title">MP3 플레이어</string>
     <string name="main_button1">Calculator</string>
     <string name="main_button2">MP3 Player</string>
 </resources>
