@@ -1,10 +1,15 @@
 <resources>
+    <!--기본적으로 생성되는 스트링. 지우면 에러.-->
     <string name="app_name">anddev</string>
+
+    <!--메인액티비티의 스트링.-->
     <string name="main_title">메인 페이지</string>
     <string name="calc_title">계산기</string>
     <string name="mp3_title">MP3 플레이어</string>
     <string name="main_button1">Calculator</string>
     <string name="main_button2">MP3 Player</string>
+
+    <!--MP3액티비티의 스트링.-->
     <string name="mp3_button1_1">재생</string>
     <string name="mp3_button1_2">일시정지</string>
     <string name="mp3_button2">정지</string>
@@ -14,4 +19,10 @@
     <string name="music4">Natural</string>
     <string name="music5">7years</string>
     <string name="music6">Shape of you</string>
+    <string name="pauseTextUpdate1">일시정지</string>
+    <string name="pauseTextUpdate2">재생</string>
+
+    <!--계산기의 스트링-->
+
+
 </resources>
