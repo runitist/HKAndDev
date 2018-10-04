@@ -11,15 +11,14 @@ import android.widget.Toast;
 public class CalculatorActivity extends AppCompatActivity {
     EditText operandEt1 = null, operandEt2 = null;//edittext변수 선언
     TextView operatorTv = null, answerTv = null;//textview변수 선언
-    String operand1 = null, operand2 = null, operator = null, result = null;
-    //로직 내에서 사용할 연산값1,2 연산자,결과값 변수 선언
-    Button btn = null;//온클릭 버튼의 정보를 가져오는 변수 선언.
+    Button btn = null;//온클릭 메서드 버튼의 정보를 가져올 변수 선언.
+    String operand1 = "", operand2 = "", operator = "", result = "";
+    //로직 내에서 사용할 연산값1,2 연산자,결과값 변수 선언(null이 아닌 빈문자열 선언.)
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
-
         _init();
     }
 
@@ -27,14 +26,14 @@ public class CalculatorActivity extends AppCompatActivity {
         setTitle(R.string.calc_title);
         operandEt1 = findViewById(R.id.operand1);
         operandEt2 = findViewById(R.id.operand2);
+        operatorTv = findViewById(R.id.operator);
         answerTv = findViewById(R.id.answer);
+        //각 뷰 요소의 객체화
     }
 
     public void setOperator(View view) {
         //계산기 뷰의 연산자를 결정하는 메서드
         btn = (Button) view;
-        operatorTv = findViewById(R.id.operator);
-        //이 메서드가 실행된 시점에서 객체화.
         if (btn.getId() == R.id.plus) {
             operator = "+";
             operatorTv.setText(operator);
@@ -49,23 +48,31 @@ public class CalculatorActivity extends AppCompatActivity {
             operatorTv.setText(operator);
         } else if (btn.getId() == R.id.clear) {
             //C버튼이 눌리면 모든 객체와 값이 초기화
-            operator = null;
-            operand1 = null;
-            operand2 = null;
-            result = null;
+            operator = "";
+            operand1 = "";
+            operand2 = "";
+            result = "";
             operatorTv.setText(operator);
-            answerTv.setText(result);
             operandEt1.setText(operand1);
             operandEt2.setText(operand2);
+            answerTv.setText(result);
         }
-        operatorTv = null;
     }
 
     public void setOperand(View view) {
         //연산값 입력
+        //연산자가 입력되지 않은땐 값1에, 연산자가 입력되면 값 2에 입력. 그리고 각 4자리씩만.
+        btn = (Button) view;//온클릭으로 넘어온 값을 저장하는 객체를 생성
+        if(operator.equals("")&&operand1.length()<4){
+            operand1 +=btn.getText();
+            operandEt1.setText(operand1);
+        }else if(!operator.equals("")&&operand2.length()<4){
+            operand2 +=btn.getText();
+            operandEt2.setText(operand2);
+        }
     }
 
     public void calculating(View view) {
-        //계산 실행
+        //계산 실행(위의 멤버변수에 저장된 값으로 계산은 실행.)
     }
 }
