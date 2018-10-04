@@ -136,31 +136,31 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
+
             <Button
-                style="@style/opbtn"
                 android:id="@+id/clear"
-                android:text="C"
-                />
-            <Button
                 style="@style/opbtn"
+                android:text="C" />
+
+            <Button
                 android:id="@+id/plus"
-                android:text="+"
-                />
-            <Button
                 style="@style/opbtn"
+                android:text="+" />
+
+            <Button
                 android:id="@+id/minus"
-                android:text="-"
-                />
-            <Button
                 style="@style/opbtn"
+                android:text="-" />
+
+            <Button
                 android:id="@+id/mult"
-                android:text="*"
-                />
-            <Button
                 style="@style/opbtn"
+                android:text="*" />
+
+            <Button
                 android:id="@+id/div"
-                android:text="/"
-                />
+                style="@style/opbtn"
+                android:text="/" />
         </LinearLayout>
 
     </LinearLayout>
