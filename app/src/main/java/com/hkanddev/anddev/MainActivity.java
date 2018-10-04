@@ -23,9 +23,11 @@ public class MainActivity extends AppCompatActivity {
     public void main_clk(View view) {
         calc_btn = (Button)view;
         if(calc_btn.getId()==(R.id.main_btn1)){
-
+            Intent intent = new Intent(this, CalculatorActivity.class);
+            startActivity(intent);
         }else if(calc_btn.getId()==(R.id.main_btn2)){
-
+            Intent intent = new Intent(this, MP3Activity.class);
+            startActivity(intent);
         }
     }
 }
