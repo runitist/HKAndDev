@@ -84,6 +84,17 @@ public class MP3Activity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        //뒤로가기 버튼을 눌렀을 때의 이벤트 오버라이딩. 음악객체를 비워줌.
+        super.onBackPressed();
+        if (mp != null) {
+            mp.stop();
+            mp = null;
+            stat = 0;
+        }
+    }
+
     private void pauseTextUpdate() {
         //일시정지 버튼의 텍스트를 변경하는 메서드
         if (stat == 1) {
